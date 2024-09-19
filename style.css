@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.wrapper {
+    text-align: center;
+    max-width: 600px;
+}
+
+.gif {
+    height: 300px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 2em;
+    color: #ff7b9c;
+    margin: 15px 0;
+    animation: popIn 1.5s ease-in-out;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-group {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button {
+    position: relative;
+    width: 160px;
+    height: inherit;
+    color: white;
+    font-size: 1.4em;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.4s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:nth-child(1) {
+    margin-left: -180px;
+    background: #ff6f91;
+}
+
+button:nth-child(2) {
+    margin-right: -180px;
+    background: #fff;
+    color: #ff6f91;
+    border: 2px solid #ff6f91;
+}
+
+/* Heart Animation */
+.heart {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background: url('https://media.giphy.com/media/3oz8xAFtqoOUUrsh7W/giphy.gif') no-repeat center/contain;
+    animation: fly 2s ease-in-out forwards;
+}
+
+@keyframes fly {
+    0% {
+        transform: scale(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2) translateY(-200px);
+        opacity: 0;
+    }
+}
